@@ -5,7 +5,7 @@ from plotly.subplots import make_subplots
 
 # Initialize the Dash app
 app = dash.Dash(title="Actual VS Target")
-app = Application.app.server
+
 # Function Definitions
 def create_gauge_chart(month, actual, target, max_value):
     """Creates a gauge chart for a given month."""
@@ -109,5 +109,4 @@ app.layout = html.Div(
 )
 
 # Run the app
-if __name__ == '__main__':
-    app.run_server()
+app = app.server
